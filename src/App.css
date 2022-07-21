@@ -1,38 +1,98 @@
 .App {
-  text-align: center;
+  padding: 10px;
+  /* text-align: center; */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.card {
+  margin: 0 10px;
+  background: #fff;
+  box-shadow: 0px 0px 4px 1px #d1d1d1;
+}
+.ant-card-body {
+  padding: 15px !important;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.card-item {
+  margin-top: 20px;
+  padding: 10px;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  box-shadow: 0px 0px 4px 1px #d1d1d1;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.card-item:hover {
+  box-shadow: 0px 0px 2px 1px #1d70ed;
 }
 
-.App-link {
-  color: #61dafb;
+.card-item .image {
+  flex: 0 0 80px;
+  width: 80px;
+  height: 80px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card-item .main {
+  margin-left: 15px;
+  flex: 1;
+  font-size: 12px;
+  color: rgb(116 116 116);
+}
+
+.card-item .main .title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #000;
+}
+
+.card-item .status {
+  position: relative;
+  height: 80px;
+}
+
+.task-status {
+  color: #000;
+  font-size: 12px;
+  vertical-align: middle;
+}
+
+.task-status::before {
+  position: relative;
+  top: -1px;
+  display: inline-block;
+  margin-right: 5px;
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 6px;
+  background: #1d70ed;
+  vertical-align: middle;
+  box-shadow: 0px 0px 3px 1px #498ff8;
+}
+
+.task-status.approving::before {
+  background: red;
+  box-shadow: 0px 0px 3px 1px rgb(245, 54, 54);
+}
+
+.card-item .status .is-liked {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  color: rgb(239 216 49);
+}
+
+thead th{
+  font-weight: 600 !important;
+}
+tbody td,tbody td .task-status{
+  color: rgb(116 116 116);
+  font-weight: 600;
+}
+
+.table-liked {
+  color: rgb(239 216 49) !important;
+}
+
+.background-gray {
+  background: rgb(243, 243, 243);
 }
