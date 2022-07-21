@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 
 import data from './data.json'
 import './App.css';
@@ -38,7 +39,7 @@ function App() {
                 return (
                   <Col {...layoutProps} key={item.guid}>
                     <div className="card-item">
-                      <img className="image" src={logo} />
+                      <img className="image" src={logo} ></img>
                       <div className="main">
                         <div className="title">{item.productCategory}</div>
                         <div className="manager">项目经理：{item.prjManager}</div>
